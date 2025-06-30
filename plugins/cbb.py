@@ -19,6 +19,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 ├➽ ᴀɴɪᴍᴇ ᴄʜᴀɴɴᴇʟ : <a href=https://t.me/Anime_Harvest>Anime Harvest</a>
 ├➽ ᴍᴀɴɢᴀ ᴄʜᴀɴɴᴇʟ : <a href=https://t.me/Manga_Campus>Manga Campus</a>
 ├➽ ᴄʜᴀᴛ ɢᴄ : <a href=https://t.me/Manga_Campus_Chat>Chat GC</a></b>
+├➽ ɴᴇᴛᴡᴏʀᴋ : <a href=https://t.me/The_Awakeners>The Awakeners</a></b>
 ╰───────────────⍟ """,
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
