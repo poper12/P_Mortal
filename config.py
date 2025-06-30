@@ -17,15 +17,15 @@ DB_URL = os.environ.get("DB_URL", "mongodb+srv://testingletsee:zwwpsYGUSaik5tXl@
 DB_NAME = os.environ.get("DB_NAME", "Cluster0")
 
 
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002686466087"))    #[Corn DB]
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002521004548"))    #[Corn DB] #-1002686466087
 
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002408076349"))  # Anime_Harvest (Primary force-subscription channel)
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002498400014"))  # Anime_Harvest (Primary force-subscription channel) #-1002408076349
 # Secondary force-subscription channel (set 0 to disable)
-FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002669465474"))
+FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002053608688")) #-1002669465474
 
-REQUEST_CHANNEL_1 = int(os.environ.get("REQUEST_CHANNEL_1", "0"))   #PVT channel of Anime Harvest
+REQUEST_CHANNEL_1 = int(os.environ.get("REQUEST_CHANNEL_1", "-1002183861154"))   #PVT channel of Anime Harvest
 
-REQUEST_CHANNEL_2 = int(os.environ.get("REQUEST_CHANNEL_2", "0"))  #Backup Channel of Anime Harvest [Manga Campus Backup channel]
+REQUEST_CHANNEL_2 = int(os.environ.get("REQUEST_CHANNEL_2", "-1002359112533"))  #Backup Channel of Anime Harvest [Manga Campus Backup channel]
 
 
 
