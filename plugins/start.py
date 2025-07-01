@@ -175,8 +175,7 @@ async def st(c: Client, m: Message):
             InlineKeyboardButton("💦ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴs", url="https://t.me/Aaru_2075")
         ],
         [
-            InlineKeyboardButton("🌐 Network", url="https://t.me/The_Awakeners"),
-            InlineKeyboardButton("👤 Owner", url="https://t.me/Aaru_2075")
+            InlineKeyboardButton("🌐 Network", url="https://t.me/The_Awakeners")
         ],
         [  
             InlineKeyboardButton("⛩ About", callback_data="about"),
