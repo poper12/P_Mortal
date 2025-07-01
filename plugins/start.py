@@ -33,10 +33,23 @@ async def st(c: Client, m: Message):
     adm = u in ADMINS
     if not sub and not adm:
         btn = []
+        active_buttons = []
+        
+        # Add all active buttons to the list
         if getattr(c, 'invitelink', None):
-            btn.append([InlineKeyboardButton("Join Channel 1", url=c.invitelink)])
+            active_buttons.append(InlineKeyboardButton("1. Join Channel 1", url=c.invitelink))
         if getattr(c, 'invitelink2', None):
-            btn.append([InlineKeyboardButton("Join Channel 2", url=c.invitelink2)])
+            active_buttons.append(InlineKeyboardButton("2. Join Channel 2", url=c.invitelink2))
+        if getattr(c, 'link_one', None):
+            active_buttons.append(InlineKeyboardButton("3. Join Channel 3", url=c.link_one))
+        if getattr(c, 'link_two', None):
+            active_buttons.append(InlineKeyboardButton("4. Join Channel 4", url=c.link_two))
+        
+        # Arrange buttons in 2x2 grid
+        for i in range(0, len(active_buttons), 2):
+            row = active_buttons[i:i+2]
+            btn.append(row)
+            
         if len(m.command) > 1:
             btn.append([InlineKeyboardButton('🔄 Try Again', url=f"https://t.me/{c.username}?start={m.command[1]}")])
         await m.reply(
@@ -58,15 +71,27 @@ async def st(c: Client, m: Message):
         if not adm:
             j1 = await is_requested_one(m)
             j2 = await is_requested_two(m)
+            btn = []
+            active_buttons = []
+            
+            if getattr(c, 'invitelink', None) and not j1:
+                active_buttons.append(InlineKeyboardButton("1. Join Channel 1", url=c.invitelink))
+            if getattr(c, 'invitelink2', None) and not j2:
+                active_buttons.append(InlineKeyboardButton("2. Join Channel 2", url=c.invitelink2))
             if c.link_one and not j1:
-                btn.append([InlineKeyboardButton("📢 Join Channel 1", url=c.link_one)])
+                active_buttons.append(InlineKeyboardButton("3. Join Channel 3", url=c.link_one))
             if c.link_two and not j2:
-                btn.append([InlineKeyboardButton("📢 Join Channel 2", url=c.link_two)])
-            if btn:
-                if len(m.command) > 1:
-                    btn.append([InlineKeyboardButton('🔄 Try Again', url=f"https://t.me/{c.username}?start={m.command[1]}")])
+                active_buttons.append(InlineKeyboardButton("4. Join Channel 4", url=c.link_two))
+            
+            # buttons in 2x2 grid
+            for i in range(0, len(active_buttons), 2):
+                row = active_buttons[i:i+2]
+                btn.append(row)
+
+            if btn and len(m.command) > 1:
+                btn.append([InlineKeyboardButton('🔄 Try Again', url=f"https://t.me/{c.username}?start={m.command[1]}")])
                 await m.reply(
-                    text="<b>Please join the following channels to continue:</b>",
+                    text="<b>Please join all the following channels to continue:</b>",
                     reply_markup=InlineKeyboardMarkup(btn),
                     parse_mode=ParseMode.HTML
                 )
@@ -134,7 +159,7 @@ async def st(c: Client, m: Message):
                          f"<blockquote><b>Tʜɪs Fɪʟᴇ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ {mad_h} minutes (Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs)</b></blockquote>\n"
                          f"<blockquote><b>📌 Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Fɪʟᴇ Tᴏ Sᴏᴍᴇᴡʜᴇʀᴇ Eʟsᴇ Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅɪɴɢ Tʜᴇʀᴇ.</b></blockquote>\n\n"
                          f"<blockquote>𝙁𝙤𝙧 🤖 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Harvest</blockquote>\n"
-                         f"<blockquote>𝙁𝙤𝙧 🥵 𝙈𝙤𝙧𝙚 𝘼𝙙𝙪𝙡𝙩 𝘾𝙤𝙣𝙩𝙚𝙣𝙩: @Pleasures_Mortal</blockquote>",
+                         f"<blockquote>𝙁𝙤𝙧 📚 𝙈𝙖𝙣𝙜𝙖/𝙝𝙬𝙖/𝙪𝙖 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Manga_Campus</blockquote>",
                     parse_mode=ParseMode.HTML
                 )
                 asyncio.create_task(del_files(out, c, k))
@@ -143,14 +168,15 @@ async def st(c: Client, m: Message):
             print(f"File req err: {e}")
     menu = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("😏ᴀᴅᴜʟᴛ ɴᴇᴛᴡᴏʀᴋ😏", url="https://t.me/Pleasures_Mortal")
+            InlineKeyboardButton("📺 Anime Channel", url="https://t.me/Anime_Harvest"),
+            InlineKeyboardButton("📚 Manga/hwa/us Channel", url="https://t.me/Manga_Campus")
         ],
         [
-            InlineKeyboardButton("ʙᴀᴄᴋ-ᴜᴘ", url="https://t.me/+bN2p7tc23uxkZDM1"),
-            InlineKeyboardButton("💦ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴs", url="https://t.me/Aaru_2075")
+            InlineKeyboardButton("💬 Chat GC / Request More", url="https://t.me/Manga_Campus_Chat")
         ],
         [
-            InlineKeyboardButton("🌐 ɴᴇᴛᴡᴏʀᴋ", url="https://t.me/The_Awakeners")
+            InlineKeyboardButton("🌐 Network", url="https://t.me/The_Awakeners"),
+            InlineKeyboardButton("👤 Owner", url="https://t.me/Aaru_2075")
         ],
         [  
             InlineKeyboardButton("⛩ About", callback_data="about"),
@@ -216,7 +242,7 @@ async def del_files(msgs, c, k):
             await c.delete_messages(chat_id=msg.chat.id, message_ids=[msg.id])
         except Exception as e:
             print(f"Delete fail {msg.id}: {e}")
-    await k.edit_text("<blockquote>𝙁𝙤𝙧 𝙈𝙤𝙧𝙚 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Harvest</blockquote>\n<blockquote>𝙁𝙤𝙧 🥵 𝙈𝙤𝙧𝙚 𝘼𝙙𝙪𝙡𝙩 𝘾𝙤𝙣𝙩𝙚𝙣𝙩: @Pleasures_Mortal</blockquote>")
+    await k.edit_text("<blockquote>𝙁𝙤𝙧 𝙈𝙤𝙧𝙚 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Harvest</blockquote>\n<blockquote>𝙁𝙤𝙧 𝙈𝙖𝙣𝙜𝙖/𝙝𝙬𝙖/𝙪𝙖 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Manga_Campus</blockquote>")
 
 @Bot.on_message(filters.command('clear_req_1') & filters.private & a)
 async def clr1(b, m):
