@@ -159,7 +159,7 @@ async def st(c: Client, m: Message):
                          f"<blockquote><b>Tʜɪs Fɪʟᴇ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ {mad_h} minutes (Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs)</b></blockquote>\n"
                          f"<blockquote><b>📌 Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Fɪʟᴇ Tᴏ Sᴏᴍᴇᴡʜᴇʀᴇ Eʟsᴇ Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅɪɴɢ Tʜᴇʀᴇ.</b></blockquote>\n\n"
                          f"<blockquote>𝙁𝙤𝙧 🤖 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Harvest</blockquote>\n"
-                         f"<blockquote>𝙁𝙤𝙧 📚 𝙈𝙖𝙣𝙜𝙖/𝙝𝙬𝙖/𝙪𝙖 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Manga_Campus</blockquote>",
+                         f"<blockquote>𝙁𝙤𝙧 🥵 𝙈𝙤𝙧𝙚 𝘼𝙙𝙪𝙡𝙩 𝘾𝙤𝙣𝙩𝙚𝙣𝙩: @Pleasures_Mortal</blockquote>",
                     parse_mode=ParseMode.HTML
                 )
                 asyncio.create_task(del_files(out, c, k))
@@ -168,11 +168,11 @@ async def st(c: Client, m: Message):
             print(f"File req err: {e}")
     menu = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("📺 Anime Channel", url="https://t.me/Anime_Harvest"),
-            InlineKeyboardButton("📚 Manga/hwa/us Channel", url="https://t.me/Manga_Campus")
+            InlineKeyboardButton("😏ᴀᴅᴜʟᴛ ɴᴇᴛᴡᴏʀᴋ😏", url="https://t.me/Pleasures_Mortal")
         ],
         [
-            InlineKeyboardButton("💬 Chat GC / Request More", url="https://t.me/Manga_Campus_Chat")
+            InlineKeyboardButton("ʙᴀᴄᴋ-ᴜᴘ", url="https://t.me/+bN2p7tc23uxkZDM1"),
+            InlineKeyboardButton("💦ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴs", url="https://t.me/Aaru_2075")
         ],
         [
             InlineKeyboardButton("🌐 Network", url="https://t.me/The_Awakeners"),
@@ -242,7 +242,7 @@ async def del_files(msgs, c, k):
             await c.delete_messages(chat_id=msg.chat.id, message_ids=[msg.id])
         except Exception as e:
             print(f"Delete fail {msg.id}: {e}")
-    await k.edit_text("<blockquote>𝙁𝙤𝙧 𝙈𝙤𝙧𝙚 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Harvest</blockquote>\n<blockquote>𝙁𝙤𝙧 𝙈𝙖𝙣𝙜𝙖/𝙝𝙬𝙖/𝙪𝙖 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Manga_Campus</blockquote>")
+    await k.edit_text("<blockquote>𝙁𝙤𝙧 𝙈𝙤𝙧𝙚 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Harvest</blockquote>\n<blockquote>𝙁𝙤𝙧 🥵 𝙈𝙤𝙧𝙚 𝘼𝙙𝙪𝙡𝙩 𝘾𝙤𝙣𝙩𝙚𝙣𝙩: @Pleasures_Mortal</blockquote>")
 
 @Bot.on_message(filters.command('clear_req_1') & filters.private & a)
 async def clr1(b, m):
