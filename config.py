@@ -21,11 +21,11 @@ CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002686466087"))    #[Corn DB] #
 
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002408076349"))  # Pleasure's Mortals
 # Secondary force-subscription channel (set 0 to disable)
-FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002669465474")) #Hentai Mortals
+FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002814786245")) #OFs Mortals
 
-REQUEST_CHANNEL_1 = int(os.environ.get("REQUEST_CHANNEL_1", "-1002711577057"))   #PVT channel of Hentai_Mortal
+REQUEST_CHANNEL_1 = int(os.environ.get("REQUEST_CHANNEL_1", "-1002560746569"))   #PVT channel of OFs_Mortal
 
-REQUEST_CHANNEL_2 = int(os.environ.get("REQUEST_CHANNEL_2", "-1002830023405"))  #Backup Channel of Hentai Mortals [Backup channel]
+REQUEST_CHANNEL_2 = int(os.environ.get("REQUEST_CHANNEL_2", "-1002776100685"))  #Backup Channel of OFs Mortals [Backup channel]
 
 
 
