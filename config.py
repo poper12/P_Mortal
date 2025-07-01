@@ -65,9 +65,9 @@ BOT_STATS_TEXT = "<b>BOT UPTIME :</b>\n{uptime}"
 
 USER_REPLY_TEXT = "<blockquote>❌𝗗𝗼𝗻'𝘁 𝘀𝗲𝗻𝗱 𝗺𝗲 𝗱𝗶𝗿𝗲𝗰𝘁 𝗺𝗲𝘀𝘀𝗮𝗴𝗲𝘀 𝗶𝗻 𝗱𝗺❟ 𝗟𝘂𝘀𝘁𝘆 𝗕𝗶𝘁𝗰𝗵 [𝗠𝘂𝘁𝗵𝗮𝗹]</blockquote>"
 
-START_MSG = os.environ.get("START_MESSAGE", "<b><blockquote>uwu Senpai {mention}</blockquote></b>\n\n<b>I'm Hannah uwu a Filestore bot of @Pleasures_Mortal,</b>\n<blockquote><i>『 Sorry, I don't talk in a UwU voice 』</i></blockquote>") #\n\n<blockquote><b>𝙁𝙤𝙧 𝙈𝙤𝙧𝙚 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Harvest</b></blockquote>\n<blockquote><b>𝙁𝙤𝙧 𝙈𝙖𝙣𝙜𝙖/𝙝𝙬𝙖/𝙪𝙖 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Manga_Campus</b></blockquote>
+START_MSG = os.environ.get("START_MESSAGE", "<b><blockquote>Hello Master {mention}</blockquote></b>\n\n<b>I'm Rukshan a Filestore bot of @Pleasures_Mortal,</b>") #\n\n<blockquote><b>𝙁𝙤𝙧 𝙈𝙤𝙧𝙚 𝘼𝙣𝙞𝙢𝙚 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Anime_Harvest</b></blockquote>\n<blockquote><b>𝙁𝙤𝙧 𝙈𝙖𝙣𝙜𝙖/𝙝𝙬𝙖/𝙪𝙖 𝘾𝙝𝙚𝙘𝙠𝙤𝙪𝙩: @Manga_Campus</b></blockquote>
 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hᴇʟʟᴏ Sᴇɴᴘᴀɪ {mention}\n\n<b>Yᴏᴜ Nᴇᴇᴅ Tᴏ Jᴏɪɴ Iɴ Mʏ Cʜᴀɴɴᴇʟs Tᴏ Gᴇᴛ Fɪʟᴇs</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hᴇʟʟᴏ ᴍᴀsᴛᴇʀ {mention}\n\n<b>Yᴏᴜ Nᴇᴇᴅ Tᴏ Jᴏɪɴ Iɴ Mʏ Cʜᴀɴɴᴇʟs Tᴏ Gᴇᴛ Fɪʟᴇs</b>")
 
 
 
@@ -98,7 +98,7 @@ def LOGGER(name: str) -> logging.Logger:
    #8104175594:AAE--rOpvYm00jmxIkBkUcFGd0Lk5z-wpG4
 
 class Txt(object):
-    about = f"""<b>😈 My Name :</b> <a href='https://t.me/PM02ROBOT'>Hannah uWu 😈 </a>
+    about = f"""<b>😈 My Name :</b> <a href='https://t.me/PM01ROBOT'>Rukshan 😈 </a>
 <b>📝 Language :</b> <a href='https://python.org'>Python 3</a>
 <b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
 <b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a>
