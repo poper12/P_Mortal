@@ -17,8 +17,8 @@ class A:
 a = A()
 
 # Default for auto-forward
-SOURCE_CHANNEL_ID = -1002560746569  # Source Channel all post is there [OFs PVT]
-DESTINATION_CHANNEL_ID = -1002776100685  # Backup Channel where all post should be available [OFs Backup]
+SOURCE_CHANNEL_ID = -1002560746569  # Source Channel all post is there [Os PVT]
+DESTINATION_CHANNEL_ID = -1002776100685  # Backup Channel where all post should be available [Os Backup]
 
 # Store per-user config temporarily in memory (you can replace with DB)
 cfg = {}
