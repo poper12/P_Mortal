@@ -17,8 +17,8 @@ class A:
 a = A()
 
 # Default for auto-forward
-SRC = -1002053608688  # Update this
-DST = -1002773214491  # Update this
+SOURCE_CHANNEL_ID = -1002560746569  # Source Channel all post is there
+DESTINATION_CHANNEL_ID = -1002776100685  # Backup Channel where all post should be available 
 
 # Store per-user config temporarily in memory (you can replace with DB)
 cfg = {}
