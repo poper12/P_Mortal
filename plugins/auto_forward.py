@@ -17,8 +17,8 @@ class A:
 a = A()
 
 # Default for auto-forward
-SRC = -100271157707  # Source Channel all post is there
-DST = -1002830023405 # Backup Channel where all post should be available 
+SRC = -1002711577057  # Source Channel all post is there [Hentai PVT]
+DST = -1002830023405 # Backup Channel where all post should be available [Hentai Backup]
 
 # Store per-user config temporarily in memory (you can replace with DB)
 cfg = {}
